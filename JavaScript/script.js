@@ -360,9 +360,9 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// HERO slideshow (FIXED: added ../img/ path prefix)
+// HERO slideshow (FIXED: path is relative to index.html)
 const hero = document.querySelector('.hero');
-const heroImages = ['../img/background1.jpg','../img/background2.jpg','../img/background3.jpg'];
+const heroImages = ['img/background1.jpg','img/background2.jpg','img/background3.jpg'];
 let currentIndex = 0;
 function changeHeroBackground() {
   if (!hero) return;
@@ -381,4 +381,5 @@ if (hero) {
   hero.style.backgroundImage = `url(${heroImages[0]})`;
   hero.style.setProperty('--bg-image', `url(${heroImages[0]})`);
   setInterval(changeHeroBackground, 5000);
+
 }
