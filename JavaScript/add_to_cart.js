@@ -206,7 +206,8 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("checkoutCart", JSON.stringify(cartItems));
 
       // Redirect to checkout process page
-      window.location.href = "../checkout_process.html";
+      window.location.href = "checkout_process.html";
     });
   }
 });
+
