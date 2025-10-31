@@ -246,7 +246,7 @@ if (modal) {
       sessionStorage.setItem('buyNowProductId', currentModalProduct.id);
 
       // 2. Redirect to the checkout page
-      window.location.href = '../checkout_process.html';
+      window.location.href = 'checkout_process.html';
     });
   }
 }
@@ -383,4 +383,5 @@ if (hero) {
   setInterval(changeHeroBackground, 5000);
 
 }
+
 
