@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart | Aere Clothing</title>
+  <link rel="stylesheet" href="CSS/add_to_cart.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="logo" onclick="window.location.href='index.html'">
+      <i class="fas fa-store"></i> Aere Clothing
+    </div>
+    <div class="nav-right">
+      <i class="fas fa-heart"></i>
+    </div>
+  </header>
+
+  <!-- Back Button -->
+  <div class="back-btn-container">
+    <button class="back-btn" onclick="window.location.href='index.html'">
+      <i class="fas fa-arrow-left"></i> Back to Shop
+    </button>
+  </div>
+
+  <!-- Cart Section -->
+  <main class="cart-section">
+    <h1><i class="fas fa-shopping-cart"></i> Your Shopping Cart</h1>
+
+    <div class="cart-container">
+      
+    </div>
+
+    <!-- Cart Summary -->
+    <div class="cart-summary fade-in">
+      <div class="summary-info">
+        <p>Subtotal: <span id="subtotal">₱2,198.00</span></p>
+        <p>Shipping: <span>₱120.00</span></p>
+        <hr>
+        <p class="total">Total: <span id="total">₱2,318.00</span></p>
+      </div>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </main>
+
+  <script type="module" src="JavaScript/add_to_cart.js"></script>
+</body>
+</html>

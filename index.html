@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aere clothing</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+
+  <body>
+    <header class="navbar">
+      <div class="logo"><i class="fas fa-store"></i>Aere clothing</div>
+
+      <div class="search-container">
+        <input type="text" placeholder="Search products..." id="search-bar">
+        <button id="search-btn"><i class="fas fa-search"></i></button>
+      </div>
+
+      <div class="nav-icons">
+        <i class="fas fa-heart" onclick="window.location.href='favorites.html'" style="cursor: pointer;"></i>
+        <i class="fas fa-shopping-cart" onclick="window.location.href='add_to_cart.html'"></i>
+        <button class="login-btn" onclick="window.location.href='login.html'">Login / Signup</button>
+      </div>
+    </header>
+
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Shop with Fashion</h1>
+        <p>Shop with confidence</p>
+      </div>
+    </section>
+
+    <section class="filter-bar">
+      <div class="filters">
+        <div class="dropdown">
+          <button class="dropbtn" id="category-btn">Category</button>
+          <div class="dropdown-content">
+            <a href="#" data-category="all">All Categories</a>
+            <a href="#" data-category="Jackets">Jackets</a>
+            <a href="#" data-category="Hoodies">Hoodies</a>
+            <a href="#" data-category="Shirts">Shirts</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn" id="color-btn">Color</button>
+          <div class="dropdown-content colors">
+            <a href="#" data-color="all">
+              <span class="color-dot" style="background-color: #eee; border: 1px solid #ccc;"></span> All Colors
+            </a>
+            <a href="#" data-color="Grey"><span class="color-dot grey"></span> Grey</a>
+            <a href="#" data-color="White">
+              <span class="color-dot" style="background-color: white; border: 1px solid #ccc;"></span> White
+            </a>
+            <a href="#" data-color="Black"><span class="color-dot black"></span> Black</a>
+            <a href="#" data-color="Brown"><span class="color-dot brown"></span> Brown</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="sort">
+        <select id="sort-select">
+          <option value="default">Default Sorting</option>
+          <option value="price">Sort by Price</option>
+          <option value="popularity">Sort by Popularity</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="products">
+      
+    </section>
+
+    <div class="pagination">
+      <a href="#" class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+    </div>
+
+    <footer>
+      <div class="newsletter">
+        <p>Receive an exclusive <span>25% discount</span> code when you signup.</p>
+        <div class="subscribe">
+          <input type="email" placeholder="Enter your email">
+          <button>Subscribe</button>
+        </div>
+      </div>
+
+      <div class="footer-columns">
+        <div>
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+          <a href="#">Locations</a>
+        </div>
+        <div>
+          <h4>Customer Care</h4>
+          <a href="#">Size Guide</a>
+          <a href="#">Help & FAQs</a>
+          <a href="#">Return My Order</a>
+          <a href="#">Refer a Friend</a>
+        </div>
+        <div>
+          <h4>Terms & Policies</h4>
+          <a href="#">Duties & Taxes</a>
+          <a href="#">Shipping Info</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">Pinterest</a>
+          <a href="#">Tiktok</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>©2025 Aere clothing. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Product Popup Modal (replace existing block) -->
+    <div id="product-modal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+        <button class="close-btn" aria-label="Close">&times;</button>
+
+        <div class="modal-body">
+          <div class="modal-img-container">
+            <img id="modal-img" src="" alt="Product image">
+          </div>
+
+          <div class="modal-product-info">
+            <div class="modal-name-row">
+              <h2 id="modal-name">Product Name</h2>
+              <i class="fas fa-heart favorite-icon" role="button" aria-label="Add to favorites"></i>
+            </div>
+            <p id="modal-price">₱0.00</p>
+          </div>
+
+          <div class="variant-gallery">
+            <img src="img/p1.jpg" alt="Variant 1" class="variant active">
+            <img src="img/p2.jpg" alt="Variant 2" class="variant">
+            <img src="img/p3.jpg" alt="Variant 3" class="variant">
+          </div>
+
+          <p id="modal-desc" class="modal-desc">
+            A stylish and comfy piece that matches perfectly with any outfit.
+            Free shipping and cash on delivery available.
+          </p>
+        </div>
+
+        <div class="modal-footer">
+          <button class="add-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/a2d9b7df5a.js" crossorigin="anonymous"></script>
+    <script type="module" src="JavaScript/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Aere Clothing</title>
+  <link rel="stylesheet" href="CSS/checkout_process.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="checkout-header">
+    <h1><i class="fas fa-store"></i> Aere Clothing</h1>
+  </header>
+
+  <main class="checkout-container">
+    <!-- User Location Section -->
+    <section class="user-location">
+      <h2><i class="fas fa-map-marker-alt"></i> Delivery Information</h2>
+      <p id="user-address">No address set yet.</p>
+      <button id="set-address-btn" class="btn-primary">Set Delivery Address</button>
+    </section>
+
+    <!-- Product Summary Section -->
+    <section class="product-summary">
+      <h2><i class="fas fa-box"></i> Order Details</h2>
+      <div id="order-items"></div>
+    </section>
+
+    <!-- Order Summary -->
+    <section class="order-summary">
+      <h2><i class="fas fa-receipt"></i> Order Summary</h2>
+      <p>Subtotal: <span id="subtotal">₱0.00</span></p>
+      <p>Shipping Fee: <span id="shipping-fee">₱120.00</span></p>
+      <hr>
+      <p class="total">Total: <span id="total">₱0.00</span></p>
+    </section>
+
+    <!-- Payment Method -->
+    <section class="payment-method">
+      <h2><i class="fas fa-wallet"></i> Payment Method</h2>
+      <div class="payment-options">
+        <label><input type="radio" name="payment" value="COD" checked> Cash on Delivery</label>
+        <label><input type="radio" name="payment" value="GCash"> GCash</label>
+        <label><input type="radio" name="payment" value="PayMaya"> PayMaya</label>
+      </div>
+    </section>
+
+    <!-- Action Buttons -->
+    <div class="checkout-actions">
+      <button id="cancel-btn" class="btn-secondary"><i class="fas fa-times"></i> Cancel Order</button>
+      <button id="place-order-btn" class="btn-primary"><i class="fas fa-check"></i> Place Order</button>
+    </div>
+  </main>
+
+  <!-- Address Popup Modal -->
+  <div class="address-modal" id="address-modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Set Your Delivery Address</h2>
+      <textarea id="address-input" placeholder="Enter your delivery address here..."></textarea>
+      <button id="save-address-btn" class="btn-primary">Save Address</button>
+    </div>
+  </div>
+
+  <script type="module" src="JavaScript/checkout_process.js"></script>
+</body>
+</html>
